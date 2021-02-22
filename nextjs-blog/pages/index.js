@@ -9,8 +9,8 @@ export default function Home() {
         </Link>
       </li>
       <li>
-        <Link href="/blog">
-          <a>Blog Post</a>
+        <Link href="/posts/first-post">
+          <a>First post</a>
         </Link>
       </li>
     </ul>
