@@ -1,18 +1,24 @@
-import Link from 'next/link'
+import Head from 'next/head'
+import Layout, { siteTitle } from './components/layout'
+import utilStyles from './styles/utils.module.scss'
+import Alert from './components/alert'
 
 export default function Home() {
   return (
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/posts/first-post">
-          <a>First post</a>
-        </Link>
-      </li>
-    </ul>
+    <Layout home>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      <section className={utilStyles.headingMd}>
+        <p>[Your Self Introduction]</p>
+        <p>
+          (This is a sample website - you’ll be building a site like this on{' '}
+          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+        </p>
+      </section>
+      <Alert type='success'>
+        ko
+      </Alert>
+    </Layout>
   )
 }
